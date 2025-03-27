@@ -3,4 +3,4 @@ numpy
 matplotlib
 shiny
 pulumi
-
+pkg_resources
