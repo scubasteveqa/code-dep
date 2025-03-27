@@ -3,12 +3,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import shiny
+import pkg_resources
 
 # Display package versions to show which versions are being used
 pd_version = pd.__version__
 np_version = np.__version__
 mpl_version = plt.matplotlib.__version__
 shiny_version = shiny.__version__
+pulumi_version = pkg_resources.get_distribution("pulumi").version
 
 # Use layout_sidebar with sidebar instead of panel_sidebar
 app_ui = ui.page_fluid(
@@ -29,7 +31,8 @@ app_ui = ui.page_fluid(
                 ui.tags.li(f"Shiny: {shiny_version}"),
                 ui.tags.li(f"Pandas: {pd_version}"),
                 ui.tags.li(f"NumPy: {np_version}"),
-                ui.tags.li(f"Matplotlib: {mpl_version}")
+                ui.tags.li(f"Matplotlib: {mpl_version}"),
+                ui.tags.li(f"Pulumi: {pulumi_version}")
             ),
             # Set open="open" to force the sidebar to always be expanded
             open="open"
