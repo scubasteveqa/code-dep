@@ -10,7 +10,7 @@ pd_version = pd.__version__
 np_version = np.__version__
 mpl_version = plt.matplotlib.__version__
 shiny_version = shiny.__version__
-pulumi_version = pulumi.__version
+pulumi_version = pulumi.__version__
 
 # Use layout_sidebar with sidebar instead of panel_sidebar
 app_ui = ui.page_fluid(
